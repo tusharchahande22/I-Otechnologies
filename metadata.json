@@ -1,0 +1,6 @@
+{
+  "name": "I&O Technologies",
+  "description": "Inovance and Optivance - AI-first software development, automation systems, and enterprise cloud solutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
