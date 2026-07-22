@@ -24,7 +24,7 @@ export const Logo: React.FC<LogoProps> = ({
   const heightClass = heightMap[size];
 
   // Select appropriate transparent image source based on theme
-  const src = theme === 'dark' ? '/logo_dark_theme.png' : '/logo_transparent.png';
+  const src = '/logo.png';
 
   return (
     <div className={`relative inline-flex items-center group/logo transition-transform duration-300 ${className}`}>

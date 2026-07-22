@@ -269,7 +269,7 @@ export const Vision: React.FC<VisionProps> = ({ onOpenEstimator }) => {
                   }}
                 >
                   <img
-                    src="/tushar_chahande_portrait.png"
+                    src="/founder.png"
                     alt="Tushar Chahande - Founder & CEO, I&O Technologies"
                     className="h-full w-auto object-cover object-top filter contrast-[1.03] brightness-[0.98] drop-shadow-[0_20px_50px_rgba(37,195,230,0.25)] mix-blend-lighten"
                   />
