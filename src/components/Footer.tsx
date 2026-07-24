@@ -9,7 +9,7 @@ interface FooterProps {
   onOpenTerms?: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ 
+export const Footer: React.FC<FooterProps> = ({
   onOpenEstimator,
   onOpenPrivacy,
   onOpenTerms
@@ -33,7 +33,7 @@ export const Footer: React.FC<FooterProps> = ({
         {/* Top Big Footer Brand Banner */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between pb-16 border-b border-white/10 gap-8">
           <div>
-            <Logo variant="horizontal" theme="dark" size="lg" className="mb-2" />
+            <Logo variant="horizontal" theme="light" size="lg" imgScale={3.5} className="mb-2" />
           </div>
 
           <div className="flex flex-wrap items-center gap-4">

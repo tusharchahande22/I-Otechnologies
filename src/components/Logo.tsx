@@ -5,25 +5,26 @@ interface LogoProps {
   variant?: 'full' | 'horizontal' | 'icon';
   theme?: 'light' | 'dark' | 'auto';
   size?: 'sm' | 'md' | 'lg' | 'xl';
+  imgScale?: number; // Visual scale multiplier (e.g. 1.3) to make graphic bigger without altering layout height
 }
 
 export const Logo: React.FC<LogoProps> = ({
   className = '',
   theme = 'light',
-  size = 'md'
+  size = 'md',
+  imgScale = 1.35
 }) => {
-  // Height map based on size specifications
-  // sm = ~52px height (as specifically requested for Navbar)
+  // Compact layout heights that keep Navbar & parent containers locked to standard height
   const heightMap = {
-    sm: 'h-[48px] sm:h-[52px]',
-    md: 'h-[56px] sm:h-[64px]',
-    lg: 'h-[72px] sm:h-[84px]',
-    xl: 'h-[96px] sm:h-[110px]',
+    sm: 'h-8 sm:h-9',
+    md: 'h-9 sm:h-10',
+    lg: 'h-12 sm:h-14',
+    xl: 'h-16 sm:h-20',
   };
 
   const heightClass = heightMap[size];
 
-  // Select appropriate transparent image source based on theme
+  // Select image source
   const src = '/logo.png';
 
   return (
@@ -34,7 +35,8 @@ export const Logo: React.FC<LogoProps> = ({
       <img
         src={src}
         alt="I&O Technologies - Inovance and Optivance"
-        className={`${heightClass} w-auto object-contain transition-transform duration-300 group-hover/logo:scale-[1.03] drop-shadow-sm`}
+        style={{ transform: `scale(${imgScale})`, transformOrigin: 'left center' }}
+        className={`${heightClass} w-auto object-contain transition-transform duration-300 group-hover/logo:brightness-105 drop-shadow-sm`}
         loading="eager"
       />
     </div>

@@ -50,11 +50,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimator }) => {
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className={`flex items-center justify-between px-5 py-3.5 rounded-2xl transition-all duration-300 ${
-            scrolled
-              ? 'glass-nav shadow-lg shadow-black/[0.03] border border-black/10'
-              : 'bg-white/60 backdrop-blur-md border border-black/[0.04]'
-          }`}
+          className={`flex items-center justify-between px-5 py-3.5 rounded-2xl transition-all duration-300 ${scrolled
+            ? 'glass-nav shadow-lg shadow-black/[0.03] border border-black/10'
+            : 'bg-white/60 backdrop-blur-md border border-black/[0.04]'
+            }`}
         >
           {/* Logo & Brand Emblem */}
           <a
@@ -64,7 +63,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEstimator }) => {
             id="nav-logo"
             aria-label="I&O Technologies Home"
           >
-            <Logo variant="horizontal" theme="light" size="sm" />
+            <Logo variant="horizontal" theme="light" size="md" imgScale={3.5} />
           </a>
 
           {/* Desktop Links */}
